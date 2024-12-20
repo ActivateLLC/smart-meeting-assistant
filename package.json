@@ -1,1 +1,29 @@
-ewogICJuYW1lIjogInNtYXJ0LW1lZXRpbmctYXNzaXN0YW50IiwKICAidmVyc2lvbiI6ICIxLjAuMCIsCiAgImRlc2NyaXB0aW9uIjogIkFJLXBvd2VyZWQgbWVldGluZyBhc3Npc3RhbnQgZm9yIHRyYW5zY3JpcHRpb24gYW5kIHN1bW1hcml6YXRpb24iLAogICJtYWluIjogImJhY2tlbmQvc2VydmVyLmpzIiwKICAic2NyaXB0cyI6IHsKICAgICJzdGFydCI6ICJub2RlIGJhY2tlbmQvc2VydmVyLmpzIiwKICAgICJkZXYiOiAibm9kZW1vbiBiYWNrZW5kL3NlcnZlci5qcyIsCiAgICAiY2xpZW50IjogImNkIGZyb250ZW5kICYmIG5wbSBzdGFydCIsCiAgICAiZGV2OmZ1bGwiOiAiY29uY3VycmVudGx5IFxcXCJucG0gcnVuIGRldlxcXCIgXFxcIm5wbSBydW4gY2xpZW50XFxcIiIKICB9LAogICJkZXBlbmRlbmNpZXMiOiB7CiAgICAiZXhwcmVzcyI6ICJeNC4xNy4xIiwKICAgICJ3cyI6ICJeOC4yLjMiLAogICAgIm1vbmdvb3NlIjogIl42LjAuMTIiLAogICAgImRvdGVudiI6ICJeMTAuMC4wIiwKICAgICJjb3JzIjogIl4yLjguNSIKICB9LAogICJkZXZEZXBlbmRlbmNpZXMiOiB7CiAgICAibm9kZW1vbiI6ICJeMi4wLjE0IiwKICAgICJjb25jdXJyZW50bHkiOiAiXjYuMy4wIgogIH0KfQ==
+{
+  "name": "smart-meeting-assistant",
+  "version": "1.0.0",
+  "description": "AI-powered meeting assistant that transcribes, distinguishes speakers, and summarizes conversations",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "cd frontend && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install-client": "cd frontend && npm install",
+    "build": "cd frontend && npm run build"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.16.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "mongoose": "^8.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "type": "module"
+}
